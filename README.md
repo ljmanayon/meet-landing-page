@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [ljmanayon/landingpage](https://github.com/ljmanayon/meet-landing-page)
-- Live Site URL: []()
+- Live Site URL: [meetlandingpage](https://ljmanayon.github.io/meet-landing-page/)
 
 ## My process
 
