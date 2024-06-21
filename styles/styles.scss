@@ -1,0 +1,419 @@
+@import "_colors";
+@import "_functions";
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "Red Hat Display";
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  background-color: secondaryColor(secondaryWhite);
+
+  header {
+    .logo {
+      width: 119px;
+      margin: 50px auto;
+    }
+  }
+  main {
+    .hero {
+      background-image: url(../starter-code/assets/tablet/image-hero.png);
+      background-repeat: no-repeat;
+      background-size: 414px;
+      background-position: center;
+      height: 153px;
+    }
+
+    h1 {
+      font-size: 40px;
+      color: primaryColor(primeBlack);
+    }
+    p {
+      margin: 13px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      color: primaryColor(primeGrey);
+      font-weight: 400;
+    }
+
+    .top-btn {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 193px;
+      margin: 0 auto;
+      span {
+        color: secondaryColor(secondaryBlue);
+      }
+    }
+
+    .btn-bg-download {
+      background-color: primaryColor(primeCyan);
+    }
+
+    .btn-bg-download:hover {
+      background-color: rgba(primaryColor(primeCyan), 0.7);
+    }
+
+    .btn-bg-info {
+      background-color: primaryColor(primeLavender);
+      width: 139px;
+      margin: auto;
+    }
+
+    .btn-bg-info:hover {
+      background-color: rgba(primaryColor(primeLavender), 0.7);
+    }
+
+    .vertical-line {
+      border-left: 1px solid primaryColor(primeGrey);
+      height: 84px;
+      margin-top: 60px;
+      margin-left: 50%;
+      opacity: 0.3;
+    }
+
+    .number {
+      border: 1px solid rgba(primaryColor(primeGrey), 0.3);
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      margin: 0 auto;
+      margin-top: -60px;
+      background-color: secondaryColor(secondaryWhite);
+    }
+
+    .models {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 0 auto;
+      gap: 25px;
+      width: 340px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+    }
+
+    .tag {
+      text-transform: uppercase;
+      font-size: 17px;
+      letter-spacing: 4px;
+      font-weight: 700;
+      color: primaryColor(primeCyan);
+    }
+
+    h2 {
+      color: primaryColor(primeBlack);
+      font-size: 35px;
+      font-weight: 700;
+    }
+
+    .model-images {
+      border-radius: 10px;
+    }
+  }
+
+  .btn {
+    padding: 1.1rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    border: none;
+    color: secondaryColor(secondaryWhite);
+  }
+
+  .vertical-line {
+    border-left: 1px solid primaryColor(primeGrey);
+    height: 84px;
+    margin-bottom: 60px;
+    margin-left: 50%;
+    opacity: 0.3;
+  }
+
+  .footer-background {
+    color: secondaryColor(secondaryWhite);
+    h2 {
+      font-size: 35px;
+      font-weight: 700;
+      margin-bottom: -20px;
+    }
+
+    p {
+      padding: 28px;
+      font-weight: 400;
+    }
+    .number {
+      color: primaryColor(primeGrey);
+      border: 1px solid rgba(primaryColor(primeGrey), 0.3);
+      border-radius: 50px;
+      font-size: 18px;
+      font-weight: 700;
+      width: 50px;
+      height: 50px;
+      padding: 10px;
+      margin: 0 auto;
+      margin-bottom: 50px;
+      background-color: white;
+      transform: translateY(-20px);
+    }
+
+    background-image: url(../starter-code/assets/mobile/image-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: 440px;
+    margin-top: -40px;
+    .footer-overlay {
+      background-color: rgba(77, 150, 168, 0.8);
+      height: 445px;
+    }
+
+    .btn-bg-footer {
+      background-color: primaryColor(primeLavender);
+      span {
+        color: secondaryColor(secondaryLavender);
+        width: 193px;
+      }
+    }
+
+    .btn-bg-footer:hover {
+      background-color: rgba(primaryColor(primeLavender), 0.7);
+    }
+  }
+}
+
+@media (min-width: 440px) {
+  body {
+    .footer-background {
+      background-image: url(../starter-code/assets/tablet/image-footer.jpg);
+      background-size: 795px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body {
+    main {
+      .hero {
+        background-size: 820px;
+        height: 303px;
+      }
+
+      .first-section {
+        width: 480px;
+        margin: 0 auto;
+        h1 {
+          font-size: 60px;
+        }
+      }
+
+      .top-btn {
+        flex-direction: row;
+        justify-content: center;
+        width: 368px;
+        gap: 20px;
+      }
+      .btn-bg-download {
+        width: 193px;
+      }
+
+      .models {
+        width: 689px;
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .information {
+        width: 573px;
+        margin: 0 auto;
+        .tag {
+          width: 290px;
+          height: 50px;
+          margin: 0 auto;
+        }
+        h2 {
+          width: 440px;
+          font-size: 44px;
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+
+        p {
+          width: 573px;
+          height: 78px;
+          margin: 0px;
+        }
+      }
+    }
+
+    .footer-background {
+      h2 {
+        font-size: 44px;
+        width: 457px;
+        margin: 0 auto;
+      }
+      p {
+        width: 573px;
+        margin: 0 auto;
+      }
+      background-image: url(../starter-code/assets/tablet/image-footer.jpg);
+      background-size: 795px;
+      .btn-bg-footer {
+        margin-top: 20px;
+        width: 193px;
+      }
+    }
+  }
+}
+
+@media (min-width: 798px) {
+  body {
+    .footer-background {
+      .footer-row-bottom {
+        display: flex;
+        flex-direction: row;
+      }
+      .footer-overlay {
+        height: 308px;
+      }
+      background-image: url(../starter-code/assets/desktop/image-footer.jpg);
+      background-size: 1440px;
+    }
+  }
+}
+
+@media (min-width: 1250px) {
+  body {
+    width: 1442px;
+
+    main {
+      .hero {
+        background-image: url(../starter-code/assets/desktop/image-hero-left.png),
+          url(../starter-code/assets/desktop/image-hero-right.png);
+        background-size: 414px;
+        height: 415px;
+        background-position: left, right;
+      }
+      .first-section,
+      .top-btn {
+        transform: translateY(-400px);
+      }
+
+      .vertical-line:not(.bottom-line),
+      .number,
+      .models,
+      .information {
+        transform: translateY(-300px);
+      }
+      .models {
+        width: 1095px;
+      }
+    }
+
+    .footer-row {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      h2,
+      p {
+        margin-right: 100px;
+        width: 350px;
+      }
+    }
+    .btn-bg-footer {
+      height: 58px;
+    }
+  }
+}

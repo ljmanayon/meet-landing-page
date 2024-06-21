@@ -1,0 +1,19 @@
+@import "_colors";
+
+@function primaryColor($key) {
+  @if map-has-key($map: $primaryColors, $key: $key) {
+    @return map-get($map: $primaryColors, $key: $key);
+  }
+
+  @warn "Unknown '#{$key}' in primaryColors.";
+  @return null;
+}
+
+@function secondaryColor($key) {
+  @if map-has-key($map: $secondaryColors, $key: $key) {
+    @return map-get($map: $secondaryColors, $key: $key);
+  }
+
+  @warn "Unknown '#{$key}' in secondaryColors.";
+  @return null;
+}
